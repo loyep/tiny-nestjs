@@ -2,10 +2,22 @@
   "name": "tiny-nestjs",
   "version": "0.0.0",
   "description": "tiny nestjs",
-  "main": "index.js",
+  "main": "ncc/index.js",
+  "types": "ncc/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "build:tsx": "tsx scripts/build.ts",
+    "build:ncc": "ncc build ./src/index.ts -m -C -o ./ncc",
+    "build:demo": "tsc -p tsconfig.demo.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "common.d.ts",
+    "common.js",
+    "core.d.ts",
+    "core.js",
+    "ncc"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/loyep/tiny-nestjs.git"
@@ -16,6 +28,18 @@
   ],
   "author": "Zack <mwl@live.com> (https://github.com/loyep)",
   "license": "MIT",
+  "devDependencies": {
+    "@nestjs/common": "^8.4.7",
+    "@nestjs/core": "^8.4.7",
+    "@nestjs/platform-express": "^8.4.7",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.6",
+    "typescript": "^4.7.0",
+    "tsx": "^3.9.0",
+    "@types/node": "^16.11.6",
+    "esbuild": "^0.15.7",
+    "@vercel/ncc": "^0.34.0"
+  },
   "bugs": {
     "url": "https://github.com/loyep/tiny-nestjs/issues"
   },

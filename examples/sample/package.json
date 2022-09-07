@@ -1,0 +1,10 @@
+{
+  "name": "tiny-nestjs-example",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "tiny-nestjs": "workspace:*"
+  }
+}
