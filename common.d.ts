@@ -1,1 +1,1 @@
-export * from './ncc/common';
+export * from './dist/common';

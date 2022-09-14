@@ -1,2 +1,2 @@
-const common = require('./ncc/core')
+const common = require('./dist/common')
 exports = common

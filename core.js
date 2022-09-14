@@ -1,2 +1,2 @@
-const {core} = require('./ncc/core')
+const core = require('./dist/core')
 exports = core
